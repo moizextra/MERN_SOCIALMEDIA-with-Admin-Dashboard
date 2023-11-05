@@ -7,9 +7,9 @@ const {
   updatePost,
   deletePost,
   addComment,
-  likePost,
+  // likePost,
   unlikePost,
-} = require('../controllers/PostController');
+} = require('../controllers/PostControllers');
 const { IsAuthenticated, authorizedRoles } = require('../middleware/auth');
 
 const router = express.Router();
@@ -36,9 +36,9 @@ router.route('/posts/:postId').delete(IsAuthenticated, deletePost);
 router.route('/posts/:postId/comments').post(IsAuthenticated, addComment);
 
 // Like a post
-router.route('/posts/:postId/like').post(IsAuthenticated, likePost);
+// router.route('/posts/:postId/like').post(IsAuthenticated, likePost);
 
 // Unlike a post
-router.route('/posts/:postId/unlike').delete(IsAuthenticated, unlikePost);
+// router.route('/posts/:postId/unlike').delete(IsAuthenticated, unlikePost);
 
 module.exports = router;
