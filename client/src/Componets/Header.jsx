@@ -7,10 +7,8 @@ import {HiOutlineLogin} from "react-icons/hi"
 const Header = () => {
   const isAuthenticated = true;
   return (
-    <nav className="bg-gray-100 h-20 flex justify-center items-center border-black border-t-8">
+    <nav className="bg-gray-100 h-20 flex items-center border-black border-t-8 p-2">
 <h1 className=' font-extrabold font-serif text-2xl '>Connected</h1>
-{/* <div className='absolute right-8 flex justify-center items-center'>
-</div> */}
   <div className=" absolute right-8 flex justify-center items-center">
          {!isAuthenticated &&  <a to="/" className=""><HiOutlineLogin size={40} /></a>
       }
